@@ -661,6 +661,7 @@ function changeColor(color) {
 <br><br>
 
 <div style="text-align:center;">
+<span style="color:gray;">click a circle</span><br>
 <svg class='circ' height='100' width='100' xmlns='http://www.w3.org/2000/svg'>
         <circle circle-type ='circ_red' cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' onclick="changeColor('red')" />
       </svg>
