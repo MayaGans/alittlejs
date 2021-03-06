@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+author: "Maya"
+date: "3/1/2021"
+output: pdf_document
+header-includes:
+    - \usepackage[labelformat=empty]{caption}
+
+---
+
+```{r}
+kableExtra::kable(mtcars, caption = "Cars")
+```

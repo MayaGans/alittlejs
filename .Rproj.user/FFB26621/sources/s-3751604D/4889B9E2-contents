@@ -1,0 +1,44 @@
+library(magrittr)
+
+find_original_name <- function(arg) {
+  browser()
+  # We want to find the parameter named arg_name, 
+  # and then check what that was
+  # named in the call above, etc.
+  this_stack <- sys.calls()
+  # Don't ever return "arg".
+  this_stack[[length(this_stack)]] <- NULL
+  # Define the arg name at the top of the stack, 
+  # ie the name that the argument
+  # has to this function.
+  arg_name <- rlang::as_name(rlang::enquo(arg))
+  # I tried rewriting this for as a reduce, 
+  # but it confuses things since it adds
+  # a weird layer to the call stack. 
+  # I think this is a case where using a for is
+  # far more straightforward.
+  for (this_call in rev(this_stack)) {
+    # We can't use call_standardise 
+    # when there's a function passed as an
+    # argument to another function (such as .f in map). 
+    # I *think* it's best to
+    # stop at that point.
+    this_call <- purrr::safely(
+      rlang::call_standardise,
+      otherwise = this_call
+    )(this_call)$result
+    if (arg_name %in% rlang::call_args_names(this_call)) {
+      this_name <- rlang::call_args(this_call)[[arg_name]]
+      if (rlang::is_symbol(this_name)) {
+        arg_name <- rlang::as_name(this_name)
+      }
+    }
+    # I keep trying to add a break() here, 
+    # but it makes this fail to get the
+    # highest level.
+  }
+  return(arg_name)
+}
+
+mtcars %>% 
+

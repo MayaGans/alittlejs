@@ -1,0 +1,6 @@
+tags$script(HTML(
+  "$('#all_circles').on('click', '.circ', (ev) => {
+        Shiny.setInputValue('all_circles', ev.target.id)
+        })
+        "
+))

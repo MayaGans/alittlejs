@@ -1,0 +1,21 @@
+library(dplyr)
+
+circle = tibble(
+  len = seq(0, 2*pi, length.out = 400),
+  x = sin(len),
+  y = cos(len))
+triangle_left = circle %>%
+  mutate(xend = x, 
+         x = -1,
+         yend = y,
+         y = 0)
+ggplot() +
+  geom_polygon(data = circle,
+               aes(x = x, y = y),
+               fill = "#ab3a3a") +
+  geom_segment(data = triangle_left,
+               aes(x = x, xend = xend,
+                   y = y, yend = yend),
+               color = "white",
+               size = 0.3,
+               lineend = "round") 
