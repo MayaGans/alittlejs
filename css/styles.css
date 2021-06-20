@@ -129,11 +129,11 @@ position: absolute;
 }
 
 .content2 a {
-  text-decoration: underline;
+  color: hotpink;
 }
 
 .content2 a:hover {
-  color: hotpink;
+  color: var(--header-color);
 }
 
 .header-left {
