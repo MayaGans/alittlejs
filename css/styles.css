@@ -124,6 +124,18 @@ position: absolute;
     width: 50%;
 }
 
+.content2 {
+  padding-top: 15%;
+}
+
+.content2 a {
+  text-decoration: underline;
+}
+
+.content2 a:hover {
+  color: hotpink;
+}
+
 .header-left {
     position: absolute;
     background-color: var(--header-color);

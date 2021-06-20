@@ -22,7 +22,10 @@ background-image: url(https://images.unsplash.com/photo-1557672172-298e090bd0f1?
 background-position: left
 
 ## A Little JS Goes a Long Way
-<div class="under">By Maya Gans</div>
+<div class="under">
+By Maya Gans <br>
+<span style="font-size:0.5em;">@Mayacelium</span>
+</div>
 
 
 ```{r setup, include=FALSE}
@@ -505,6 +508,18 @@ When I <span style="color:#FF71C3;">click</span> on <span style="color:#FF71C3;"
 ---
 
 .header[
+# Custom Inputs
+]
+
+.contentimg[
+
+<img src="images/js2r.png" alt="a box representing an R script with two boxes inside, one representing calling the JS code and another " style="max-width:90%;"></img>
+
+]
+
+---
+
+.header[
 # Shiny
 ]
 
@@ -617,6 +632,7 @@ $( document ).ready(function() {
 
 ---
 
+
 class: center
 
 .header[
@@ -690,8 +706,21 @@ $.extend(shinyCircleBinding, {
 
 Shiny.inputBindings.register(shinyCircleBinding, 'shinylearnrdemo.circleInput');
 ```
-]
-]
+]]]]
+
+---
+
+.header[
+# Must Reads
 ]
 
+.content2[
+## Books
+- [JavaScript for R by John Coene](https://javascript-for-r.com/)
+- [Outstanding User Interfaces with Shiny by David Granjon](https://unleash-shiny.rinterface.com/)
+
+## Code
+- [shinyWidgets](https://github.com/dreamRs/shinyWidgets)
+- [js4shiny](https://github.com/gadenbuie/js4shiny)
 ]
+
