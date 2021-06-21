@@ -719,8 +719,9 @@ Shiny.inputBindings.register(shinyCircleBinding, 'shinylearnrdemo.circleInput');
 - [JavaScript for R by John Coene](https://javascript-for-r.com/)
 - [Outstanding User Interfaces with Shiny by David Granjon](https://unleash-shiny.rinterface.com/)
 
+
 ## Code
 - [shinyWidgets](https://github.com/dreamRs/shinyWidgets)
 - [js4shiny](https://github.com/gadenbuie/js4shiny)
+- [Jonathan Trattner's JS + Shiny](https://www.jdtrat.com/talks/shiny-js/slides#1)
 ]
-
